@@ -17,14 +17,14 @@ const NavBar = () => {
     ];
 
     return (
-        <nav>
+        <nav className="mt-5">
             <div className="md:hidden text-2xl" onClick={() => setOpen(!open)}>
                 {
                     open ? <IoClose /> : <AiOutlineMenu />
                 }
             </div>
 
-            <ul className={`${open ? 'top-8' : '-top-60'} md:flex gap-4 bg-[#dcdcdc] p-6 rounded-xl absolute md:static duration-700`}>
+            <ul className={`${open ? 'top-14' : '-top-60'} md:flex gap-4 justify-center bg-[#dcdcdc] md:bg-white p-6 rounded-xl absolute md:static duration-700`}>
                 {
                     routes.map(route => <Link key={route.id} route={route}></Link>)
                 }
